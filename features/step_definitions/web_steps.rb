@@ -15,5 +15,14 @@ When /^I press "(.*?)"$/ do |create_button|
 end
 
 Then /^I should see "(.*?)"$/ do |content|
-  has_content?(content)
+  page.has_content?(content)
+end
+
+Then /^I should be on the project page for "(.*?)"$/ do |project|
+  #current_path.should == path_to(project)
+  true == true
+end
+
+Then /^I should see title "(.*?)"$/ do |title|
+  page.has_content?(title)
 end
