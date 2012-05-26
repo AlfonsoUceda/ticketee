@@ -18,6 +18,10 @@ Then /^I should see "(.*?)"$/ do |content|
   page.should have_content(content)
 end
 
+Then /^I should not see "(.*?)"$/ do |content|
+  page.should_not have_content(content)
+end
+
 Then /^I should be on the project page for "(.*?)"$/ do |project|
   #current_path.should == path_to(project)
   #p path_to(project)
