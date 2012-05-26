@@ -2,8 +2,8 @@ Given /^(?:|I )am on (.+)$/ do  |page_name|
   visit path_to(page_name)
 end
 
-When /^I follow "(.*?)"$/ do |new_project|
-  visit new_project_path
+When /^I follow "(.*?)"$/ do |link|
+  click_link(link)
 end
 
 When /^I fill in "(.*?)" with "(.*?)"$/ do |name, value|
